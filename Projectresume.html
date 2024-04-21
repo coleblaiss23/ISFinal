@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cole A. Blais - Resume</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffffff 25%, #add8e6 25%); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .resume {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+            text-align: left;
+            margin-top: 50px;
+            max-width: 600px;
+            width: 90%;
+            z-index: 1;
+            color: #333; 
+        }
+        .resume h2 {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+        .resume p {
+            margin-bottom: 15px;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin-top: -20px;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .links a {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        }
+        .links a:hover {
+            background-color: #45a049;
+        }
+       
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 999;
+            display: none;
+        }
+        .back-to-top:hover {
+            background-color: #45a049;
+        }
+        .back-to-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 999;
+        }
+        .back-to-layout:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+   
+    <a id="top"></a>
+    <h1>Cole A. Blais</h1>
+    <div class="resume">
+        <p>(949) 345-9622 | Cblais1@byu.edu<br>www.linkedin.com/in/cole-blais-699b8326b/</p>
+        <p>Brigham Young University – Marriott School of Business<br>Bachelor of Science in Finance (Undeclared)</p>
+        <h2>EXPERIENCE</h2>
+        <p><strong>Cascada Ventures LLC (Real Estate Development) Assistant to Developer</strong></p>
+        <ul>
+            <li>Collaborated with local real estate professionals to organize construction site cleanup.</li>
+            <li>Conducted property inspections to identify necessary repairs and enhancements, including flood prevention, exterior paint, and space optimization.</li>
+            <li>Conducted tours of jobsite(s), providing detailed descriptions of jobs being completed to management and clients.</li>
+        </ul>
+        <p><strong>Raindeck LLC (Splash Pad Parts Manufacturer) Production Assistant</strong></p>
+        <ul>
+            <li>Facilitated transactions of splash pad products and equipment.</li>
+            <li>Oversaw and maintained a fleet of company vehicles and trailers.</li>
+            <li>Coordinated both local and nationwide pickup and delivery of splash pad products.</li>
+            <li>Prepared, packaged, and facilitated the shipment of splash pad products worldwide.</li>
+            <li>Provided support as assistant to business operators.</li>
+            <li>Proficient in delivering quality customer service.</li>
+        </ul>
+        <h2>LEADERSHIP & SERVICE</h2>
+        <p><strong>Tempe Institute of Religion Institute Council</strong></p>
+        <ul>
+            <li>Worked as a council member to help and create a safe and welcoming environment for all students at Arizona State University.</li>
+            <li>Personally worked to welcome new students and act as a guide during their first year of college.</li>
+        </ul>
+        <p><strong>The Church of Jesus Christ of Latter-day Saints Piura, Peru Volunteer Representative 2021 – 2023</strong></p>
+        <ul>
+            <li>Devoted 2 years to help individuals better their quality of life through Christian teachings and principles.</li>
+            <li>Effectively communicated with individuals from diverse cultural backgrounds in both Peru and Utah, facilitating understanding and building rapport.</li>
+        </ul>
+        <h2>AWARDS, SKILLS & INTERESTS</h2>
+        <ul>
+            <li>Languages Spoken: English & Spanish</li>
+            <li>Licenses Held: Life Insurance (#998894)</li>
+            <li>Private Pilot || Aviation Enthusiast</li>
+            <li>Skills: Excel, Attention to detail, Customer service, Communication, Strategic thinking, Dependable, Service Oriented, Self-Motivated, Self-Starter</li>
+        </ul>
+    </div>
+    <div class="links">
+        <a href="Projectresume.html" target="_blank">Download Resume</a>
+        <a href="#top">Back to Top</a> 
+    </div>
+
+    <button class="back-to-home" onclick="window.location.href='index.html'">Back to home</button>
+    
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
