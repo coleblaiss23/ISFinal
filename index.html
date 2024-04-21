@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .content-container {
-            height: 100vh; /* Set desired height */
+            min-height: 100vh; /* Set desired height */
             overflow-y: auto; /* Enable vertical scrolling */
+            position: relative; /* Make it a positioning context for the anchor */
+        }
+
+        /* Anchor style */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none; /* Initially hide */
+        }
+
+        /* Show the anchor when scrolling down */
+        .content-container.scrolled .back-to-top {
+            display: inline-block;
         }
     </style>
 </head>
@@ -39,8 +57,30 @@
                 </div>
             </div>
         </div>
- <h1>Check Out This Awesome Graph Below:</h1>
+        <h1>Check Out This Awesome Graph Below:</h1>
         <div class='tableauPlaceholder' id='viz1712612404560' style='position: relative'><noscript><a href='#'><img alt='Superstore Sales Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuperstoreSalesDashboard_16534148636030&#47;SuperstoreSalesDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SuperstoreSalesDashboard_16534148636030&#47;SuperstoreSalesDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuperstoreSalesDashboard_16534148636030&#47;SuperstoreSalesDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='_gl=1*17tcsuo*_ga*MTc2MTM4OTQxLjE3MTI2MTE4NzI.*_ga_8YLN0SNXVS*MTcxMjYxMTg3MC4xLjEuMTcxMjYxMjM0MC4wLjAuMA..' /></object></div> <script type='text/javascript'> var divElement = document.getElementById('viz1712612404560'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width='100%';vizElement.style.height='100%'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+        <a href="#" class="back-to-top">Back to Top</a>
     </div>
+
+    <script>
+        // JavaScript to handle scrolling and showing/hiding the anchor
+        const contentContainer = document.querySelector('.content-container');
+        const backToTop = document.querySelector('.back-to-top');
+
+        contentContainer.addEventListener('scroll', () => {
+            if (contentContainer.scrollTop > 100) {
+                contentContainer.classList.add('scrolled');
+            } else {
+                contentContainer.classList.remove('scrolled');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            contentContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
